@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #525782;
+
+}
+
+.header{
+    width: 100%;
+    height: 80px;
+    display: block;
+    background-color: bisque;
+}
+
+.inner_header{
+    width: 90%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.logo_container{
+    height: 100%;
+    display: table;
+    float: left;
+
+}
+
+.logo_container h1{
+    color: #757AAA;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: "Montserrat";
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+
+.navigation{
+    float: right;
+    height: 60%;
+}
+
+.navigation li{
+    height: 100%;
+    display: table;
+    float: left;
+    padding: 0px 20px;
+
+
+}
+
+.navigation li:last-child{
+    padding-right: 0;
+}
+
+.navigation li a{
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    color: #757AAA;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    text-decoration: none;
+
+}
+
+
+.container h2{
+    color: #eee;
+    margin-bottom: 30px;
+    text-align: center;
+
+}
+
+#search-input {
+    background-image: url(search2.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 20px;
+    margin-top: 60px;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid #eaeaea;
+    padding: 5px 10px;
+    font-size: 12px;
+
+}
+
+#searchbar {
+    position: relative;
+    text-align: center;
+
+}
+
+
+#apps ul {
+    position: relative;
+    width: 75%;
+    margin: 50px auto 0;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#apps ul li {
+    display: flex;
+    background: rgba(255, 255,255,.1);
+    padding: 10px 20px;
+    color: #fff;
+    margin: 5px 0;
+    transition: .5s;
+}
+
+#apps ul li span:nth-child(2){
+    width: 900px;
+    text-align: right;
+    border: 1px black;
+}
+#apps span: input[type = "submit"] {
+    width: 900px;
+    text-align: right;
+    border: 1px black;
+}
+
+
+
+
+#apps ul li:hover{
+    transform: scale(1.06);
+    background-color: bisque;
+}
+

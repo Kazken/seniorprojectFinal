@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Sign In</title>
+    <link rel="stylesheet"  type=""text/css" href="{% static '/css/User.css' %}" />
+</head>
+<body>
+<div class="header">
+    <div class="inner_header">
+        <div class="logo_container">
+            <h1>SW Provision</h1>
+
+        </div>
+        <ul class="navigation">
+            <li><a href="/AdminPage/">Admin Page</a></li>
+            <li><a href="/AddApp/">Applications</a></li>
+            <li><a href="/User/">User</a></li>
+        </ul>
+
+
+    </div>
+</div>
+<div class="sidebar">
+    <header><a href="#">Add New &#43;</a></header>
+    <ul style="list-style-type: none;">
+        <li><a href="#">Active</a></li>
+        <li><a href="#">Inactive</a></li>
+    </ul>
+    <div class="card card-body">
+        <h5>Users</h5>
+    </div>
+    <div class="card card-body">
+        <table class="table">
+            <th>Name</th>
+            <th>Role Id</th>
+            <th>Apps</th>
+
+    {% for i in User %}
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.RoleID}}</td>
+            <td>{{i.Apps}}</td>
+        </tr>
+    {% endfor %}
+
+        </table>
+
+    </div>
+</div>

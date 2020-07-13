@@ -1,0 +1,68 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Sign In</title>
+    <link rel="stylesheet"  type=""text/css" href="{% static '/css/AddApp.css' %}" />
+
+</head>
+<body>
+<div class="header">
+    <div class="inner_header">
+        <div class="logo_container">
+            <h1>SW Provision</h1>
+
+        </div>
+        <ul class="navigation">
+            <li><a href="/AdminPage/">Admin Page</a></li>
+            <li><a href="/AddApp/">Applications</a></li>
+            <li><a href="/User/">User</a></li>
+        </ul>
+
+
+    </div>
+</div>
+<div class="sidebar">
+    <header><a href="#">Add New &#43;</a></header>
+    <ul style="list-style-type: none;">
+        <li><a href="#">Active</a></li>
+        <li><a href="#">Inactive</a></li>
+    </ul>
+</div>
+<div class="container">
+    <h1>Add Applications</h1>
+    <div id="searchbar">
+        <input type="text" id="search-input" placeholder="search for application"/>
+    </div>
+    <div id="apps">
+        <ul id="searchlist">
+            <li><span class="App">App 1</span>
+                <span><input type="submit" class="button" value="Active"></span>
+
+            </li>
+            <li><span class="App">App 2</span>
+                <span><input type="submit" class="button" value="Active"></span>
+
+            </li>
+            <li><span class="App">App 3</span>
+                <span><input type="submit" class="button" value="Active"></span>
+            </li>
+
+        </ul>
+
+        <script src= "AddApps.js"></script>
+
+    </div>
+
+    {% for i in AddApp %}
+    <tr>
+        <td>{{i.name}}</td>
+    </tr>
+    {% endfor %}
+</div>
+
+</body>
+
+</html>
