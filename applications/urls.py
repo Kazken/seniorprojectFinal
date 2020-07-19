@@ -1,13 +1,17 @@
 from django.urls import path
 from . import views
+from . views import search
 
 
 
 urlpatterns = [
-    path('HomePage/', views.HomePage),
-    path('AdminPage/', views.AdminPage),
-    path('AddApp/', views.AddApp),
-    path('User/', views.User),
-    path('Profile/', views.Profile),
+    path('login/', views.login, name="login"),
+    path('dash/', views.dash, name="dash"),
+    path('app_page/', views.app_page, name="apps"),
+    path('user_page/', views.user_page, name="users"),
+    path('profile/<str:pk>/', views.profile, name="profile"),
+    path('audit/', views.audit, name="audit"),
+    path('search/', views.search, name="search")
+
 
 ]

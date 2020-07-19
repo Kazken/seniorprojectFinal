@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Sign In</title>
-    <link rel="stylesheet"  type=""text/css" href="{% static '/css/HomePage.css' %}" />
+    <link rel="stylesheet"  type="text/css" href="{% static '/css/HomePage.css' %}" >
 </head>
 <body>
 
@@ -15,12 +15,12 @@
         </div>
     </div>
 </div>
-<form class="box" action="index.html" method="post">
+<form class="box" action= "{% url 'dash' %}">
     <h1>Sign In</h1>
     <input type="text" name="" placeholder="Username">
     <input type="password" name="" placeholder="Password">
     <input type="checkbox" class="chech-box"><span>Remember Password</span>
-    <input type="submit" class="button_active" value="Submit"><a href="AdminPage.html"></a>
+    <input type="submit" class="button_active" value="Submit" >
 </form>
 
 

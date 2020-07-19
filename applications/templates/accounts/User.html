@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Sign In</title>
-    <link rel="stylesheet"  type=""text/css" href="{% static '/css/User.css' %}" />
+    <link rel="stylesheet"  type="text/css" href="{% static '/css/User.css' %}" >
 </head>
 <body>
 <div class="header">
@@ -14,38 +14,44 @@
 
         </div>
         <ul class="navigation">
-            <li><a href="/AdminPage/">Admin Page</a></li>
-            <li><a href="/AddApp/">Applications</a></li>
-            <li><a href="/User/">User</a></li>
+            <li><a href="/dash/">Home</a></li>
+            <li><a href="/app_page/">Applications</a></li>
+            <li><a href="/user_page/">User</a></li>
+            <li><a href="/login/">Login</a></li>
         </ul>
 
 
     </div>
 </div>
-<div class="sidebar">
-    <header><a href="#">Add New &#43;</a></header>
-    <ul style="list-style-type: none;">
-        <li><a href="#">Active</a></li>
-        <li><a href="#">Inactive</a></li>
-    </ul>
-    <div class="card card-body">
-        <h5>Users</h5>
-    </div>
-    <div class="card card-body">
+<h1>Users</h1>
+
+<div id="searchbar">
+    <input type="text" id="search-input" placeholder="search for application"/>
+    <button class="btn2 btn-success" type="submit"> Search</button>
+</div>
+
+    <div class="card-body">
         <table class="table">
             <th>Name</th>
-            <th>Role Id</th>
-            <th>Apps</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Status</th>
+            <th>Profile</th>
 
-    {% for i in User %}
+    {% for user in user_page %}
         <tr>
-            <td>{{i.name}}</td>
-            <td>{{i.RoleID}}</td>
-            <td>{{i.Apps}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.uname}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.status}}</td>
+            <td><a href="{% url 'profile' user.id %}">View</a> </td>
         </tr>
     {% endfor %}
 
         </table>
+
+        <div class="fixed-btn">
+            <button class="btn btn1"><a href="/admin/applications/user/">Add User</a></button>
 
     </div>
 </div>

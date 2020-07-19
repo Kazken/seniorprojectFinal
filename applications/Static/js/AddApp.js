@@ -1,5 +1,5 @@
 const searchInput = document.querySelector("#search-input");
-const listItems = document.querySelectorAll("li");
+const listItems = document.querySelectorAll("td");
 
 const listElements = [...listItems];
 const search = function(event) {
@@ -15,3 +15,4 @@ const search = function(event) {
     });
 };
 searchInput.addEventListener("input", search);
+

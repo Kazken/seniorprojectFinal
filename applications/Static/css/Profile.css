@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: Palatino;
     background: #525782;
 
 }
@@ -76,7 +76,6 @@ body {
 }
 
 #search-input {
-    background-image: url(search2.png);
     background-position: right;
     background-repeat: no-repeat;
     width: 50%;
@@ -97,40 +96,52 @@ body {
 }
 
 
-#apps ul {
+.user-list {
     position: relative;
     width: 75%;
     margin: 50px auto 0;
     text-align: center;
     padding: 10px;
     box-sizing: border-box;
+
 }
 
-#apps ul li {
+.profile {
     display: flex;
     background: rgba(255, 255,255,.1);
     padding: 10px 20px;
     color: #fff;
     margin: 5px 0;
     transition: .5s;
+
 }
 
-#apps ul li span:nth-child(2){
+.profile th,
+.profile td {
     width: 900px;
-    text-align: right;
-    border: 1px black;
-}
-#apps span: input[type = "submit"] {
-    width: 900px;
-    text-align: right;
+    text-align: center;
     border: 1px black;
 }
 
+.profile tbody tr {
+    border-bottom: 1px solid white;
+}
 
 
-
-#apps ul li:hover{
+.profile td:hover {
     transform: scale(1.06);
     background-color: bisque;
 }
+
+.profile tbody tr:nth-of-type(even) {
+    background-color: #757AAA;
+}
+
+
+
+
+
+
+
+
 

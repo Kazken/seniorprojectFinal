@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: Palatino;
     background: #525782;
 
 }
@@ -32,17 +32,17 @@ body {
     height: 100%;
     display: table-cell;
     vertical-align: middle;
-    font-family: 'Montserrat';
     font-size: 50px;
     text-transform: uppercase;
 }
 
 
 h1{
+    text-align: center;
     color: white;
     text-transform: uppercase;
     font-weight: 500;
-    margin: 10%;
+    margin-top: 40px;
 
 
 }
@@ -56,23 +56,25 @@ h1{
 }
 
 .btn{
-    background: none;
-    border: 2px solid bisque;
-    font-family: "montserrat";
+    background: bisque;
+    border: 5px solid bisque;
     text-transform: uppercase;
-    padding: 12px 20px;
-    min-width: 200px;
-    margin: 10px;
+    padding: 30px 30px;
+    min-width: 300px;
+    margin: auto 20px 20px;
     cursor: pointer;
     transition: color 0.4s linear;
+    text-decoration-color: white;
 }
 
 .btn1,.btn2{
-    color: white;
+    color:  white;
+    font-size: medium;
 }
 
 .btn3,.btn4{
     color: white;
+    font-size: medium;
 }
 
 .btn1:hover,.btn2:hover{

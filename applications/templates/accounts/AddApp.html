@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <title>Sign In</title>
-    <link rel="stylesheet"  type=""text/css" href="{% static '/css/AddApp.css' %}" />
+    <link rel="stylesheet"  type="text/css" href="{% static '/css/AddApp.css' %}" >
 
 </head>
 <body>
@@ -16,51 +16,51 @@
 
         </div>
         <ul class="navigation">
-            <li><a href="/AdminPage/">Admin Page</a></li>
-            <li><a href="/AddApp/">Applications</a></li>
-            <li><a href="/User/">User</a></li>
+            <li><a href="/dash/">Home Page</a></li>
+            <li><a href="/app_page/">Applications</a></li>
+            <li><a href="/user_page/">Users</a></li>
+            <li><a href="/login/">Login</a></li>
         </ul>
 
 
     </div>
 </div>
-<div class="sidebar">
-    <header><a href="#">Add New &#43;</a></header>
-    <ul style="list-style-type: none;">
-        <li><a href="#">Active</a></li>
-        <li><a href="#">Inactive</a></li>
-    </ul>
+
+    <h1>Applications</h1>
 </div>
-<div class="container">
-    <h1>Add Applications</h1>
     <div id="searchbar">
         <input type="text" id="search-input" placeholder="search for application"/>
+        <button class="btn2 btn-success" type="submit"> Search</button>
     </div>
-    <div id="apps">
-        <ul id="searchlist">
-            <li><span class="App">App 1</span>
-                <span><input type="submit" class="button" value="Active"></span>
-
-            </li>
-            <li><span class="App">App 2</span>
-                <span><input type="submit" class="button" value="Active"></span>
-
-            </li>
-            <li><span class="App">App 3</span>
-                <span><input type="submit" class="button" value="Active"></span>
-            </li>
-
-        </ul>
-
-        <script src= "AddApps.js"></script>
-
     </div>
 
-    {% for i in AddApp %}
-    <tr>
-        <td>{{i.name}}</td>
-    </tr>
-    {% endfor %}
+
+    <div class="app-list">
+        <table class="list">
+            <th>Name</th>
+            <th>Status</th>
+
+            {% for i in app_page %}
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.status}}</td>
+        </tr>
+        {% endfor %}
+
+        </table>
+    </div>
+</div>
+</div>
+
+<div class="fixed-btn">
+    <button class="btn btn1"><a href="/admin/applications/app/">Add App</a></button>
+
+</div>
+
+
+
+    </div>
+</div>
 </div>
 
 </body>

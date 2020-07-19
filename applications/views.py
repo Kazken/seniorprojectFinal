@@ -1,22 +1,45 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.db.models import Q
+
 
 # Create your views here.
 from .models import *
 
-def HomePage(request):
+def login(request):
     return render(request, 'accounts/HomePage.html')
 
-def AdminPage(request):
+def dash(request):
     return render(request, 'accounts/AdminPage.html')
 
-def AddApp(request):
-    AddApp = Apps.objects.all()
-    return render(request, 'accounts/AddApp.html', {'Apps':Apps})
+def app_page(request):
 
-def User(request):
-    User = Users.objects.all()
-    return render(request, 'accounts/User.html', {'Users': User} )
+    apps = App.objects.all()
 
-def Profile(request):
-    return render(request, 'accounts/Profile.html')
+    return render(request, 'accounts/AddApp.html', {'app_page': apps})
+
+def user_page(request):
+    users = User.objects.all()
+
+    return render(request, 'accounts/User.html', {'user_page': users} )
+
+def profile(request, pk):
+    users = User.objects.get(id=pk)
+
+    apps= users.app_set.all()
+
+    context = {'users': users, 'apps': apps}
+
+    return render(request, 'accounts/Profile.html', context)
+
+def audit(request):
+    return render(request, 'accounts/AuditLog.html')
+
+def search(request):
+    template = 'AddApp.html'
+
+    query = request.GET.get('q')
+
+    results = App.objects.filter(Q(body__icontains=query))
+
+    return render(request, template)

@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: Palatino;
     background: #525782;
 
 }
@@ -67,62 +67,17 @@ body {
 
 }
 
-.sidebar{
-    position: fixed;
-    left: 100;
-    width: 170px;
-    height: 100%;
-    background-color: bisque;
-    text-align: inherit;
-}
-
-.sidebar header{
-    font-size: 22px;
+h1{
+    text-align: center;
     color: white;
-    text-align: center;
-    line-height: 70px;
-    background: #757AAA;
-    user-select: none;
-    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 40px;
 
-}
-
-.sidebar ul a{
-    display: block;
-    height: 100%;
-    width: 70%;
-    line-height: 65px;
-    font-size: 20px;
-    color: #757AAA;
-    text-decoration: none;
-    padding-left: 20px;
-    box-sizing: border-box;
-    border-top: 1px solid rgba (255, 255, 255,255);
-    border-bottom: 1px;
-    border-color: #525782;
-    transition: .4s;
-
-}
-
-ul li:hover a{
-    padding-left: 50px;
-}
-
-.sidebar ul a i{
-    margin-right: 16px;
-}
-
-
-.container h1{
-    color: #eee;
-    margin-bottom: 30px;
-    margin-left: 300px;
-    text-align: center;
 
 }
 
 #search-input {
-    background-image: url(search2.png);
     background-position: right;
     background-repeat: no-repeat;
     width: 50%;
@@ -136,46 +91,73 @@ ul li:hover a{
 }
 
 #searchbar {
-    position: relative;
-    text-align: center;
+    position: center;
 
 }
 
-
-#apps ul {
+.app-list {
     position: relative;
     width: 75%;
     margin: 50px auto 0;
-    margin-left: 300px;
+    text-align: center;
     padding: 10px;
     box-sizing: border-box;
+
 }
 
-#apps ul li {
+.list {
     display: flex;
     background: rgba(255, 255,255,.1);
     padding: 10px 20px;
     color: #fff;
     margin: 5px 0;
     transition: .5s;
+
 }
 
-#apps ul li span:nth-child(2){
+.list th,
+.list td {
     width: 900px;
-    text-align: right;
-    border: 1px black;
-}
-#apps span: input[type = "submit"] {
-    width: 900px;
-    text-align: right;
+    text-align: center;
     border: 1px black;
 }
 
+.list tbody tr {
+    border-bottom: 1px solid white;
+}
 
 
-
-#apps ul li:hover{
+.list td:hover {
     transform: scale(1.06);
     background-color: bisque;
 }
+
+.list tbody tr:nth-of-type(even) {
+    background-color: #757AAA;
+}
+
+.btn {
+    position: fixed;
+    background: bisque;
+    width: 180px;
+    height: 45px;
+    line-height: 45px;
+    bottom: 3%;
+    right: 3%;
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn1 {
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #ffffff;
+}
+
+
+
+
+
 

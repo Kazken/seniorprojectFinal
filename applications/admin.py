@@ -2,6 +2,7 @@ from django.contrib import admin
 
 from .models import *
 
-admin.site.register(Users)
-admin.site.register(Apps)
+admin.site.register(User)
+admin.site.register(App)
+admin.site.register(RoleList)
 

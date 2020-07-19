@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Sign In</title>
-    <link rel="stylesheet"  type=""text/css" href="{% static '/css/Profile.css' %}" />
+    <link rel="stylesheet"  type="text/css" href="{% static '/css/Profile.css' %}" >
 </head>
 <body>
 
@@ -15,9 +15,10 @@
 
         </div>
         <ul class="navigation">
-            <li><a href="/AdminPage/">Admin Page</a></li>
-            <li><a href="/AddApp/">Applications</a></li>
-            <li><a href="/User/">User</a></li>
+            <li><a href="/dash/">Home</a></li>
+            <li><a href="/app_page/">Applications</a></li>
+            <li><a href="/user_page/">Users</a></li>
+            <li><a href="/login/">Login</a></li>
         </ul>
 
 
@@ -25,24 +26,28 @@
 </div>
 <div id="searchbar">
     <input type="text" id="search-input" placeholder="search for application"/>
+    <button class="btn btn-success" type="submit"> Search</button>
 </div>
 
 
-<div class="container">
-    <h2>User Name</h2>
+    <div class="user-list">
+        <table class="profile">
+            <th>App Name</th>
+            <th>Status</th>
+            <th>Remove</th>
+            <th>Update</th>
 
-    <div id="apps">
-        <ul id="searchlist">
-            <li><span class="App">App 1</span>
-                <span><input type="submit" class="button" value="Active"></span>
+            {% for app in apps %}
+            <tr>
+                <td>{{app.name}}</td>
+                <td>{{app.status}}</td>
+                <td><a href="">Remove</a></td>
+                <td><a href="">Update</a></td>
 
-            </li>
-            <li><span class="App">App 2</span>
-                <span><input type="submit" class="button" value="Active"></span>
+            </tr>
+            {% endfor %}
 
-            </li>
-            <li><span class="App">App 3</span>
-                <span><input type="submit" class="button" value="Active"></span>
-            </li>
-
-        </ul>
+        </table>
+    </div>
+</div>
+</div>
