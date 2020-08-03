@@ -16,7 +16,7 @@
 
         </div>
         <ul class="navigation">
-            <li><a href="/dash/">Home Page</a></li>
+            <li><a href="/dash/">Home </a></li>
             <li><a href="/app_page/">Applications</a></li>
             <li><a href="/user_page/">Users</a></li>
             <li><a href="/login/">Login</a></li>
@@ -29,8 +29,8 @@
     <h1>Applications</h1>
 </div>
     <div id="searchbar">
-        <input type="text" id="search-input" placeholder="search for application"/>
-        <button class="btn2 btn-success" type="submit"> Search</button>
+        <input type="text" id="search-input" placeholder="search application"/>
+        <button class="btn2 btn-search" type="submit"> Search</button>
     </div>
     </div>
 
@@ -39,11 +39,16 @@
         <table class="list">
             <th>Name</th>
             <th>Status</th>
+            <th>Update</th>
+            <th>Remove</th>
 
             {% for i in app_page %}
         <tr>
             <td>{{i.name}}</td>
             <td>{{i.status}}</td>
+            <td><a href="{% url 'update' user.id %}">Update</a> </td>
+            <td><a href="{% url 'delete' user.id %}">Remove</a> </td>
+
         </tr>
         {% endfor %}
 
@@ -53,7 +58,7 @@
 </div>
 
 <div class="fixed-btn">
-    <button class="btn btn1"><a href="/admin/applications/app/">Add App</a></button>
+    <button class="btn btn1"><a href="/add_app/" >Add App</a></button>
 
 </div>
 

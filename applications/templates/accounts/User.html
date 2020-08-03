@@ -16,7 +16,7 @@
         <ul class="navigation">
             <li><a href="/dash/">Home</a></li>
             <li><a href="/app_page/">Applications</a></li>
-            <li><a href="/user_page/">User</a></li>
+            <li><a href="/user_page/">Users</a></li>
             <li><a href="/login/">Login</a></li>
         </ul>
 
@@ -26,7 +26,7 @@
 <h1>Users</h1>
 
 <div id="searchbar">
-    <input type="text" id="search-input" placeholder="search for application"/>
+    <input type="text" id="search-input" placeholder="search user"/>
     <button class="btn2 btn-success" type="submit"> Search</button>
 </div>
 
@@ -37,6 +37,7 @@
             <th>Email</th>
             <th>Status</th>
             <th>Profile</th>
+            <th>Remove</th>
 
     {% for user in user_page %}
         <tr>
@@ -45,13 +46,15 @@
             <td>{{user.email}}</td>
             <td>{{user.status}}</td>
             <td><a href="{% url 'profile' user.id %}">View</a> </td>
+            <td><a href="{% url 'delete_user' user.id %}">Remove</a> </td>
         </tr>
     {% endfor %}
 
         </table>
 
         <div class="fixed-btn">
-            <button class="btn btn1"><a href="/admin/applications/user/">Add User</a></button>
+            <button class="btn btn1"><a href="/add_user/">Add User</a></button>
 
-    </div>
+
+            </div>
 </div>

@@ -32,7 +32,6 @@ body {
     height: 100%;
     display: table-cell;
     vertical-align: middle;
-    font-family: "Montserrat";
     font-size: 50px;
     text-transform: uppercase;
 }
@@ -61,7 +60,6 @@ body {
     vertical-align: middle;
     height: 100%;
     color: #757AAA;
-    font-family: 'Montserrat';
     font-size: 16px;
     text-decoration: none;
 
@@ -94,6 +92,9 @@ h1{
     position: center;
 
 }
+
+
+
 
 .app-list {
     position: relative;
@@ -140,7 +141,7 @@ h1{
     position: fixed;
     background: bisque;
     width: 180px;
-    height: 45px;
+    height: 60px;
     line-height: 45px;
     bottom: 3%;
     right: 3%;
@@ -148,6 +149,7 @@ h1{
     text-align: center;
     text-decoration: none;
     cursor: pointer;
+
 }
 
 .btn1 {
@@ -155,7 +157,6 @@ h1{
     font-weight: 900;
     color: #ffffff;
 }
-
 
 
 

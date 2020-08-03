@@ -25,7 +25,7 @@
     </div>
 </div>
 <div id="searchbar">
-    <input type="text" id="search-input" placeholder="search for application"/>
+    <input type="text" id="search-input" placeholder="search application"/>
     <button class="btn btn-success" type="submit"> Search</button>
 </div>
 
@@ -35,14 +35,13 @@
             <th>App Name</th>
             <th>Status</th>
             <th>Remove</th>
-            <th>Update</th>
 
             {% for app in apps %}
             <tr>
                 <td>{{app.name}}</td>
                 <td>{{app.status}}</td>
-                <td><a href="">Remove</a></td>
-                <td><a href="">Update</a></td>
+                <td><a class="btn btn-sm btn-info" href="{% url 'delete_assign' app.id %}">Remove</a></td>
+
 
             </tr>
             {% endfor %}

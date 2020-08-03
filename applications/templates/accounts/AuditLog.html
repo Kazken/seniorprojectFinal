@@ -1,10 +1,114 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <title>Sign In</title>
+    <link rel="stylesheet"  type="text/css" href="{% static '/css/AuditLog.css' %}" >
 </head>
 <body>
 
-</body>
-</html>
+<div class="header">
+    <div class="inner_header">
+        <div class="logo_container">
+            <h1>SW Provision</h1>
+
+        </div>
+        <ul class="navigation">
+            <li><a href="/dash/">Home</a></li>
+            <li><a href="/app_page/">Applications</a></li>
+            <li><a href="/user_page/">Users</a></li>
+            <li><a href="/login/">Login</a></li>
+        </ul>
+
+
+    </div>
+</div>
+
+<h1>Audit Log | 1 week </h1>
+
+
+<table>
+    <tr>
+        <th>User</th>
+        <th>Time</th>
+        <th>Application</th>
+        <th>User Status</th>
+        <th>Action</th>
+        <th>Admin</th>
+    </tr>
+    <tr>
+        <td>Abi Wilkins</td>
+        <td>July 28 1:58pm </td>
+        <td> -- </td>
+        <td>Inactive</td>
+        <td>Account Removed</td>
+        <td>Prabhjyot K</td>
+    </tr>
+    <tr>
+        <td>Abi Wilkins</td>
+        <td>July 28 1:27pm </td>
+        <td>Slack</td>
+        <td>Active</td>
+        <td>Removed</td>
+        <td>Prabhjyot K</td>
+
+    </tr>
+    <tr>
+        <td>Abi Wilkins</td>
+        <td>July 28 1:25pm </td>
+        <td>Zoom</td>
+        <td>Active</td>
+        <td>Removed</td>
+        <td>Prabhjyot K</td>
+    </tr>
+    <tr>
+        <td>Abi Wilkins</td>
+        <td>July 28 1:21pm </td>
+        <td>Creative Cloud</td>
+        <td>Active</td>
+        <td>Removed</td>
+        <td>Prabhjyot K</td>
+    </tr>
+    <tr>
+        <td>James Flynn</td>
+        <td>July 27 3:20pm </td>
+        <td>Evernote</td>
+        <td>Inactive</td>
+        <td>Removed</td>
+        <td>Tyler A</td>
+    </tr>
+    <tr>
+        <td>Anna Johnson</td>
+        <td>July 27 12:15pm </td>
+        <td>Power PDF</td>
+        <td>Active</td>
+        <td>Updated</td>
+        <td>Tyler A</td>
+    </tr>
+    <tr>
+        <td>Sheri Nicole</td>
+        <td>July 27 9:32am </td>
+        <td>Intuit Quickbooks</td>
+        <td>Active</td>
+        <td>Updated</td>
+        <td>Tyler A</td>
+    </tr>
+    <tr>
+        <td>Logan Jackson</td>
+        <td>July 24 10:45am </td>
+        <td> -- </td>
+        <td>Active</td>
+        <td>Account Created</td>
+        <td>Tyler A</td>
+    </tr>
+    <tr>
+        <td>Anissa Jay</td>
+        <td>July 22 3:45pm </td>
+        <td> -- </td>
+        <td>Active</td>
+        <td>Account Created</td>
+        <td>Prabhjyot K</td>
+    </tr>
+
+</table>
